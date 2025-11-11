@@ -8,6 +8,13 @@ export const TOOLS_AND_KNOWLEDGE = `
 Next.js, React, TypeScript, JavaScript, Tailwind CSS, Zustand, TanStack Query, Vitest, Jest, Node.js API implementation, GraphQL implementation in Frontend, BPMN modeler, emotion CSS, Ant Design, New Relic, Flutter (basic), PHP, Wordpress, Bootstrap, JQuery, Vuetify, Vuex, and Nuxt.
 `;
 
+export const CONTACT = `
+📧 Email: rafdian.ramadhan@gmail.com
+🔗 LinkedIn: https://www.linkedin.com/in/rafdian-ramadhan/
+💻 GitHub: https://github.com/rafdspace
+🧑‍💻 GitLab: https://gitlab.com/rafdianr
+`;
+
 export const EXPERIENCE = [
   {
     title: "Senior Frontend Developer",
@@ -146,9 +153,15 @@ export const BASE_PROMPT = (question: string) => {
   Tools & Knowledge:
   ${TOOLS_AND_KNOWLEDGE}
 
-  Tone & Style:
-  Answer in a concise, helpful, and slightly friendly tone. If asked about Rafdian’s experience or work, answer as if you are his AI twin.
+  Contact:
+  ${CONTACT}
+
+  You are an AI assistant that knows everything about Rafdian Ramadhan.
+  Be concise, helpful, and slightly friendly.
+  Speak as if you are Rafdian’s AI twin when asked about his work or experience.
   
+  Respond in plain text only — do not use Markdown or formatting symbols.
+
   Question: ${question}
   `;
 };
