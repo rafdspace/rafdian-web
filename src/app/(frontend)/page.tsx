@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default async function Home() {
   return (
-    <main className="flex min-h-screen w-full max-w-3xl flex-col justify-center items-center py-32 px-16 bg-white dark:bg-black sm:items-start">
+    <div className="flex flex-1 flex-col justify-center">
       <div className="flex flex-col items-center gap-4 text-center sm:items-start sm:text-left">
         <h1 className="text-4xl font-semibold leading-tight text-black dark:text-zinc-50">
           Hi, I’m Rafdian Ramadhan 👋
@@ -45,6 +45,6 @@ export default async function Home() {
           </Link>
         </div>
       </div>
-    </main>
+    </div>
   );
 }

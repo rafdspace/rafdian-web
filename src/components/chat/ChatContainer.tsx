@@ -19,7 +19,7 @@ export function ChatContainer() {
   };
 
   return (
-    <div className="flex flex-col rounded-xl p-4 bg-gray-50 dark:bg-gray-900 gap-4 overflow-hidden h-[65vh]">
+    <div className="flex flex-col rounded-xl p-4 bg-gray-50 dark:bg-gray-900 gap-4 overflow-hidden h-full">
       <div
         className={`flex-1 flex flex-col ${
           messages.length ? "justify-end" : "justify-center"

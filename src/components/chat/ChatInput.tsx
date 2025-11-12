@@ -25,12 +25,12 @@ export function ChatInput({ disabled, onSend }: Props) {
         value={input}
         onChange={(e) => setInput(e.target.value)}
         disabled={disabled}
-        className="flex-1 border rounded-lg px-3 py-2 text-sm bg-white dark:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-500"
+        className="flex-1 border rounded-lg px-3 py-2 text-sm bg-white dark:bg-gray-800 focus:outline-none focus:ring-0 border-zinc-200"
       />
       <button
         type="submit"
         disabled={disabled}
-        className="bg-blue-600 hover:bg-blue-700 disabled:opacity-50 text-white px-4 py-2 rounded-lg transition"
+        className="bg-foreground hover:bg-[#383838] disabled:opacity-50 text-white px-4 py-2 rounded-lg transition"
       >
         Send
       </button>
