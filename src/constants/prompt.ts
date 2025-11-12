@@ -147,7 +147,7 @@ export const BASE_PROMPT = (question: string) => {
   Professional Experience:
   ${EXPERIENCE.map(
     (exp) =>
-      `${exp.title} at ${exp.company} (${exp.period})\n${exp.description}`
+      `${exp.title} at ${exp.company} (${exp.period})\n${exp.description}`,
   ).join("\n\n")}
   
   Tools & Knowledge:

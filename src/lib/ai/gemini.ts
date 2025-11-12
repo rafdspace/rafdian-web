@@ -1,8 +1,8 @@
-import { BASE_PROMPT } from "@/constants/prompt";
 import { GoogleGenAI } from "@google/genai";
+import { BASE_PROMPT } from "@/constants/prompt";
 
 const ai = new GoogleGenAI({
-  apiKey: process.env.GEMINI_API_KEY!,
+  apiKey: process.env.GEMINI_API_KEY || "",
 });
 
 export async function askGemini(question: string) {

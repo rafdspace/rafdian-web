@@ -8,14 +8,15 @@ export async function POST(req: Request) {
     if (!question) {
       return NextResponse.json(
         { error: "Question is required" },
-        { status: 400 }
+        { status: 400 },
       );
     }
 
     const answer = await askGemini(question);
     return NextResponse.json({ answer });
-  } catch (err: any) {
+  } catch (err: unknown) {
     console.error("Error in /api/chat:", err);
-    return NextResponse.json({ error: err.message }, { status: 500 });
+    const errMessage = err instanceof Error ? err.message : String(err);
+    return NextResponse.json({ error: errMessage }, { status: 500 });
   }
 }

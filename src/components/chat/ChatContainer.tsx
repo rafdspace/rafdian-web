@@ -1,8 +1,8 @@
 "use client";
 
+import { useChat } from "@/hooks/useChat";
 import { ChatBubble } from "./ChatBubble";
 import { ChatInput } from "./ChatInput";
-import { useChat } from "@/hooks/useChat";
 
 const SUGGESTION_QUESTIONS = [
   "Tell me about your experience.",
@@ -32,6 +32,7 @@ export function ChatContainer() {
               <div className="flex flex-wrap justify-center gap-2">
                 {SUGGESTION_QUESTIONS.map((q) => (
                   <button
+                    type="button"
                     key={q}
                     onClick={() => handleSuggestionClick(q)}
                     className="px-3 py-1 text-sm bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-200 border border-gray-200 dark:border-gray-700 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700 transition"
@@ -44,7 +45,7 @@ export function ChatContainer() {
           ) : (
             <div className="flex flex-col gap-2">
               {messages.map((message, i) => (
-                <ChatBubble key={i} message={message} />
+                <ChatBubble key={`message-${i + 1}`} message={message} />
               ))}
               {loading && (
                 <div className="text-sm italic text-gray-400">Typing...</div>

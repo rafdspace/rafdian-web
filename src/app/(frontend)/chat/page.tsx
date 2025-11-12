@@ -1,10 +1,8 @@
-"use client";
-
-import { ChatContainer } from "@/components/chat/ChatContainer";
 import { ArrowLeft } from "lucide-react";
 import Link from "next/link";
+import { ChatContainer } from "@/components/chat/ChatContainer";
 
-export default function ChatPage() {
+export default async function ChatPage() {
   return (
     <section className="relative flex flex-col gap-6 justify-between h-screen w-full max-w-3xl mx-auto pb-8 pt-14 md:py-32 px-6 sm:px-16 bg-white dark:bg-black text-gray-800 dark:text-gray-100">
       <div className="flex items-center absolute top-4 md:top-10">

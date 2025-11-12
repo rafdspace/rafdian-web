@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useRef, useEffect } from "react";
+import { useEffect, useRef, useState } from "react";
 import type { Message } from "@/types/chat";
 
 export function useChat() {
@@ -10,7 +10,7 @@ export function useChat() {
 
   useEffect(() => {
     chatEndRef.current?.scrollIntoView({ behavior: "smooth" });
-  }, [messages]);
+  }, []);
 
   async function send(question: string) {
     if (!question.trim()) return;
@@ -34,6 +34,7 @@ export function useChat() {
         },
       ]);
     } catch (err) {
+      const _errMessage = err instanceof Error ? err.message : String(err);
       setMessages((prev) => [
         ...prev,
         { role: "assistant", content: "❌ Something went wrong." },
