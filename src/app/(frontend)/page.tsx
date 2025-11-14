@@ -18,32 +18,27 @@ export default async function Home() {
           <span className="font-semibold">Tailwind CSS</span>.
         </p>
 
-        <p className="text-base leading-7 text-zinc-600 dark:text-zinc-400">
-          Want to{" "}
-          <span className="font-medium text-black dark:text-zinc-50">
-            collaborate
-          </span>
-          , learn about my{" "}
+        <p className="text-lg leading-8 text-zinc-600 dark:text-zinc-400">
+          Interested in my{" "}
+          <Link
+            href="/projects"
+            className="font-medium text-black dark:text-zinc-50 underline underline-offset-4"
+          >
+            projects
+          </Link>
+          , curious about my{" "}
           <span className="font-medium text-black dark:text-zinc-50">
             experience
           </span>
-          , or just{" "}
-          <span className="font-medium text-black dark:text-zinc-50">
-            connect
-          </span>
-          ? Let’s chat!
-        </p>
-      </div>
-
-      <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row mt-8">
+          , or want to{" "}
           <Link
             href="/chat"
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-max"
+            className="font-medium text-black dark:text-zinc-50 underline underline-offset-4"
           >
-            💬 Ask Me Anything
+            chat with me
           </Link>
-        </div>
+          ? I’d love to connect!
+        </p>
       </div>
     </div>
   );
