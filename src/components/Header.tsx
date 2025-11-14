@@ -53,6 +53,7 @@ const Header = () => {
         </nav>
 
         <button
+          type="button"
           className="md:hidden p-2 rounded-md hover:bg-gray-100"
           onClick={() => setOpen(!open)}
         >

@@ -1,9 +1,9 @@
 "use client";
 
+import { ExternalLink, Github } from "lucide-react";
 import { motion } from "motion/react";
-import Image, { StaticImageData } from "next/image";
+import Image, { type StaticImageData } from "next/image";
 import { useEffect, useState } from "react";
-import { Github, ExternalLink } from "lucide-react";
 import BBoost1 from "@/app/(frontend)/assets/images/bboost-1.png";
 import BBoost2 from "@/app/(frontend)/assets/images/bboost-2.png";
 import ChatPage1 from "@/app/(frontend)/assets/images/chat-1.png";
@@ -84,7 +84,7 @@ export default function ProjectsPage() {
       <div className="columns-1 sm:columns-2 gap-6 space-y-6">
         {projects.map((project, index) => (
           <motion.div
-            key={index}
+            key={`project-${index + 1}`}
             layout
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -174,7 +174,8 @@ function ImageCarousel({ images }: { images: (string | StaticImageData)[] }) {
         <div className="absolute bottom-2 left-1/2 -translate-x-1/2 flex gap-1">
           {images.map((_, i) => (
             <button
-              key={i}
+              type="button"
+              key={`image-${i + 1}`}
               onClick={() => setIndex(i)}
               className={`w-2 h-2 rounded-full ${
                 i === index ? "bg-white" : "bg-gray-400/60"
