@@ -32,7 +32,7 @@ export default function RootLayout({
       >
         <div className="min-h-screen items-center justify-center font-sans">
           <Header />
-          <div className="relative flex min-h-screen w-full max-w-3xl mx-auto pb-[60px] pt-20 md:pb-[100px] md:pt-[120px] px-6 sm:px-16 bg-white dark:bg-black text-gray-800 dark:text-gray-100 border-x border-zinc-50 shadow-xs overflow-auto">
+          <div className="relative flex min-h-screen w-full max-w-3xl mx-auto pb-[60px] pt-20 md:pb-[100px] md:pt-[120px] px-6 sm:px-16 bg-white dark:bg-background text-gray-800 dark:text-gray-100 border-x border-gray-100 dark:border-gray-900 shadow-xs overflow-auto">
             {children}
           </div>
           <Footer />

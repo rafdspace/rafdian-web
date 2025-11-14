@@ -19,14 +19,14 @@ const Header = () => {
   const mobileLinks = LINKS.slice(1);
 
   return (
-    <header className="fixed top-0 w-full border-b border-gray-100 bg-white dark:bg-black z-50">
+    <header className="fixed top-0 w-full border-b border-gray-100 dark:border-gray-900 bg-white dark:bg-black z-50">
       <div className="w-full max-w-3xl mx-auto flex items-center justify-between py-2 px-6 sm:px-16">
         <Link
           href="/"
           className={`p-2 rounded-md transition flex items-center ${
             pathname === "/"
-              ? "bg-foreground text-white"
-              : "hover:bg-gray-100 text-foreground"
+              ? "bg-foreground text-background"
+              : "hover:bg-gray-100 dark:hover:bg-zinc-800 text-foreground"
           }`}
         >
           <House />
@@ -42,8 +42,8 @@ const Header = () => {
                 href={href}
                 className={`p-2 rounded-md transition ${
                   isActive
-                    ? "bg-foreground text-white"
-                    : "hover:bg-gray-100 text-foreground"
+                    ? "bg-foreground text-background"
+                    : "hover:bg-gray-100 dark:hover:bg-zinc-800 text-foreground"
                 }`}
               >
                 {label}
@@ -73,7 +73,7 @@ const Header = () => {
                 onClick={() => setOpen(false)}
                 className={`block px-6 py-3 transition ${
                   isActive
-                    ? "bg-foreground text-white"
+                    ? "bg-foreground text-background"
                     : "hover:bg-gray-100 text-foreground"
                 }`}
               >
