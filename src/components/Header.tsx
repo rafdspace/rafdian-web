@@ -1,6 +1,6 @@
 "use client";
 
-import { House } from "lucide-react";
+import { House, Menu, X } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React from "react";
@@ -8,37 +8,81 @@ import React from "react";
 const LINKS = [
   { href: "/", label: <House />, key: "home" },
   { href: "/chat", label: "Chat", key: "chat" },
+  { href: "/projects", label: "Projects", key: "projects" },
 ];
 
 const Header = () => {
   const pathname = usePathname();
+  const [open, setOpen] = React.useState(false);
+
+  const desktopLinks = LINKS.slice(1);
+  const mobileLinks = LINKS.slice(1);
 
   return (
-    <div
-      className="fixed h-max flex gap-2 items-center left-1/2 -translate-x-1/2 bottom-6 md:absolute md:left-14 md:top-8 md:translate-x-0 border rounded-md border-gray-50 p-2 shadow-xs bg-white dark:bg-black z-100
-      "
-    >
-      {LINKS.map(({ href, label, key }, index) => {
-        const isActive = pathname === href;
-        const isLast = index === LINKS.length - 1;
+    <header className="fixed top-0 w-full border-b border-gray-100 bg-white dark:bg-black z-50">
+      <div className="w-full max-w-3xl mx-auto flex items-center justify-between py-2 px-6 sm:px-16">
+        <Link
+          href="/"
+          className={`p-2 rounded-md transition flex items-center ${
+            pathname === "/"
+              ? "bg-foreground text-white"
+              : "hover:bg-gray-100 text-foreground"
+          }`}
+        >
+          <House />
+        </Link>
 
-        return (
-          <React.Fragment key={key}>
-            <Link
-              href={href}
-              className={`p-2 w-max rounded-md cursor-pointer transition-colors flex items-center ${
-                isActive
-                  ? "bg-foreground text-white"
-                  : "hover:bg-gray-100 text-foreground"
-              }`}
-            >
-              {label}
-            </Link>
-            {!isLast && <div className="h-6 w-px bg-zinc-200 mx-1" />}
-          </React.Fragment>
-        );
-      })}
-    </div>
+        <nav className="hidden md:flex gap-2 items-center">
+          {desktopLinks.map(({ href, label, key }) => {
+            const isActive = pathname === href;
+
+            return (
+              <Link
+                key={key}
+                href={href}
+                className={`p-2 rounded-md transition ${
+                  isActive
+                    ? "bg-foreground text-white"
+                    : "hover:bg-gray-100 text-foreground"
+                }`}
+              >
+                {label}
+              </Link>
+            );
+          })}
+        </nav>
+
+        <button
+          className="md:hidden p-2 rounded-md hover:bg-gray-100"
+          onClick={() => setOpen(!open)}
+        >
+          {open ? <X /> : <Menu />}
+        </button>
+      </div>
+
+      {open && (
+        <div className="md:hidden border-t border-gray-100 bg-white dark:bg-black">
+          {mobileLinks.map(({ href, label, key }) => {
+            const isActive = pathname === href;
+
+            return (
+              <Link
+                key={key}
+                href={href}
+                onClick={() => setOpen(false)}
+                className={`block px-6 py-3 transition ${
+                  isActive
+                    ? "bg-foreground text-white"
+                    : "hover:bg-gray-100 text-foreground"
+                }`}
+              >
+                {label}
+              </Link>
+            );
+          })}
+        </div>
+      )}
+    </header>
   );
 };
 
