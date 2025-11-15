@@ -11,6 +11,7 @@ import ChatPage2 from "@/app/(frontend)/assets/images/chat-2.png";
 import PokemonPage1 from "@/app/(frontend)/assets/images/pokemon-1.png";
 import PokemonPage2 from "@/app/(frontend)/assets/images/pokemon-2.png";
 import PokemonPage3 from "@/app/(frontend)/assets/images/pokemon-3.png";
+import Wedding1 from "@/app/(frontend)/assets/images/wedding-1.png";
 
 const projects = [
   {
@@ -44,6 +45,15 @@ const projects = [
     tools: ["Node.js", "Express", "Photoroom API"],
   },
   {
+    title: "Wedding Invitation",
+    description:
+      "A custom wedding invitation platform built with React and integrated with the Google Sheets API for managing guest invitations efficiently.",
+    github: "https://github.com/rafdspace/wedding-invitation",
+    images: [Wedding1],
+    preview: "https://rafdspace-wedding.vercel.app/",
+    tools: ["React", "Typescript", "Emotion CSS", "Google Sheets API"],
+  },
+  {
     title: "Pokemon - Gotta Catch 'em All",
     description:
       "A web-app used for collecting pokemons created using Create-React-App with PWA (progressive web application). The design is inspired by Pokemon Wiki - Fandom.",
@@ -69,6 +79,7 @@ const toolColors: Record<string, string> = {
   GraphQL: "bg-fuchsia-600 text-white",
   Redux: "bg-purple-600 text-white",
   "Emotion CSS": "bg-rose-400 text-white",
+  "Google Sheets API": "bg-green-500 text-white",
 };
 
 export default function ProjectsPage() {
