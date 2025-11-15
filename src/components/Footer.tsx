@@ -4,6 +4,7 @@ import { Mail } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import Github from "@/app/(frontend)/assets/images/github-mark.png";
+import Gitlab from "@/app/(frontend)/assets/images/gitlab-mark.png";
 import LinkedIn from "@/app/(frontend)/assets/images/li-mark.png";
 
 const Footer = () => {
@@ -28,6 +29,15 @@ const Footer = () => {
           >
             <div className="dark:bg-white dark:rounded-sm dark:w-5 dark:h-5 dark:flex dark:items-center dark:justify-center">
               <Image src={Github} alt="GitHub" width={16} height={16} />
+            </div>
+          </Link>
+          <Link
+            href="https://gitlab.com/rafdianr"
+            target="_blank"
+            className="hover:opacity-80"
+          >
+            <div className="bg-foreground rounded-sm w-5 h-5 flex items-center justify-center">
+              <Image src={Gitlab} alt="GitHub" width={20} height={20} />
             </div>
           </Link>
           <Link
