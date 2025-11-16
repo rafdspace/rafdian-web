@@ -54,7 +54,7 @@ const Header = () => {
 
         <button
           type="button"
-          className="md:hidden p-2 rounded-md hover:bg-gray-100"
+          className="md:hidden p-2 rounded-md hover:bg-gray-100 dark:hover:bg-zinc-800 text-foreground"
           onClick={() => setOpen(!open)}
         >
           {open ? <X /> : <Menu />}
