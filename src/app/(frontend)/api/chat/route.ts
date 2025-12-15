@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { askGemini } from "@/lib/ai/gemini";
+import { askAI } from "@/lib/ai/openRouter";
 
 export async function POST(req: Request) {
   try {
@@ -12,11 +12,15 @@ export async function POST(req: Request) {
       );
     }
 
-    const answer = await askGemini(question);
+    const answer = await askAI(question);
+
     return NextResponse.json({ answer });
   } catch (err: unknown) {
     console.error("Error in /api/chat:", err);
-    const errMessage = err instanceof Error ? err.message : String(err);
-    return NextResponse.json({ error: errMessage }, { status: 500 });
+
+    const message =
+      err instanceof Error ? err.message : "Internal server error";
+
+    return NextResponse.json({ error: message }, { status: 500 });
   }
 }
