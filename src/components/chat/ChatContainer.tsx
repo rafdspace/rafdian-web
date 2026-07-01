@@ -28,7 +28,7 @@ export function ChatContainer() {
         <div className="overflow-auto scrollbar-thin scrollbar-thumb-gray-300 dark:scrollbar-thumb-gray-700">
           {messages.length === 0 ? (
             <div className="flex flex-col items-center justify-center gap-4 text-center text-gray-400">
-              <div>👋 Start the conversation by asking me something!</div>
+              <div>Start the conversation by asking me something!</div>
               <div className="flex flex-wrap justify-center gap-2">
                 {SUGGESTION_QUESTIONS.map((q) => (
                   <button

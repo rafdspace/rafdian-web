@@ -5,7 +5,7 @@ export default async function Home() {
     <div className="flex flex-1 flex-col justify-center">
       <div className="flex flex-col items-center gap-4 text-center sm:items-start sm:text-left">
         <h1 className="text-4xl font-semibold leading-tight text-black dark:text-zinc-50">
-          Hi, I’m Rafdian Ramadhan 👋
+          Hi, I’m Rafdian Ramadhan
         </h1>
         <p className="text-lg leading-8 text-zinc-600 dark:text-zinc-400">
           A{" "}

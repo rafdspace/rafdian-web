@@ -1,0 +1,17 @@
+export const TOOLS_COLORS: Record<string, string> = {
+  "Next.js": "bg-black text-white",
+  "Gemini API": "bg-indigo-600 text-white",
+  Typescript: "bg-blue-600 text-white",
+  "Tailwind CSS": "bg-cyan-400 text-gray-900",
+  React: "bg-sky-500 text-white",
+  "Canva App SDK": "bg-teal-500 text-white",
+  "Canva Selection API": "bg-teal-600 text-white",
+  "Canva Image Overlay API": "bg-teal-700 text-white",
+  "Node.js": "bg-green-600 text-white",
+  Express: "bg-gray-700 text-white",
+  "Photoroom API": "bg-amber-600 text-white",
+  GraphQL: "bg-fuchsia-600 text-white",
+  Redux: "bg-purple-600 text-white",
+  "Emotion CSS": "bg-rose-400 text-white",
+  "Google Sheets API": "bg-green-500 text-white",
+};
