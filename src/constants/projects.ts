@@ -64,13 +64,13 @@ export const PERSONAL_PROJECTS = [
     preview: "https://pokedex-rafdian.vercel.app/",
     tools: ["React", "Redux", "Emotion CSS", "GraphQL"],
   },
-  {
-    title: "Wedding Invitation",
-    description:
-      "A custom wedding invitation platform built with React and integrated with the Google Sheets API for managing guest invitations efficiently.",
-    github: "https://github.com/rafdspace/wedding-invitation",
-    images: [Wedding1],
-    preview: "https://rafdspace-wedding.vercel.app/",
-    tools: ["React", "Typescript", "Emotion CSS", "Google Sheets API"],
-  },
+ // {
+  //  title: "Wedding Invitation",
+  //  description:
+  //    "A custom wedding invitation platform built with React and integrated with the Google Sheets API for managing guest invitations efficiently.",
+   // github: "https://github.com/rafdspace/wedding-invitation",
+    //images: [Wedding1],
+   // preview: "https://rafdspace-wedding.vercel.app/",
+   // tools: ["React", "Typescript", "Emotion CSS", "Google Sheets API"],
+  //},
 ];
